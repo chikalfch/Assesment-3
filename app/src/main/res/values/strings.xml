@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HitungLuasSegitiga</string>
+    <string name="hitung_luas_segitiga">Hitung Luas Segitiga</string>
+    <string name="alas">Alas (cm)</string>
+    <string name="tinggi">Tinggi (cm)</string>
+    <string name="luas">Luas</string>
+</resources>
