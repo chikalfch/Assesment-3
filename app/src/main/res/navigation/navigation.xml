@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/navigation"
+        app:startDestination="@id/MenuFragment">
+    <fragment
+            android:id="@+id/MenuFragment"
+            android:name="org.d3if3056.hitung_luassegitiga.ui.MenuFragment"
+            android:label="Menu"
+            tools:layout="@layout/fragment_menu">
+        <action
+                android:id="@+id/action_MenuFragment_to_hitungPersegiPanjangFragment"
+                app:destination="@id/hitungPersegiPanjangFragment" />
+        <action
+                android:id="@+id/action_MenuFragment_to_hitungSegitigaFragment"
+                app:destination="@id/hitungSegitigaFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/hitungSegitigaFragment"
+            android:name="org.d3if3056.hitung_luassegitiga.ui.HitungSegitigaFragment"
+            android:label="Hitung Segitiga"
+            tools:layout="@layout/fragment_hitung_segitiga"/>
+    <fragment
+            android:id="@+id/hitungPersegiPanjangFragment"
+            android:name="org.d3if3056.hitung_luassegitiga.ui.HitungPersegiPanjangFragment"
+            android:label="Hitung Persegi Panjang"
+            tools:layout="@layout/fragment_hitung_persegipanjang">
+    </fragment>
+</navigation>

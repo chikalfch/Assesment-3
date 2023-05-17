@@ -1,7 +1,17 @@
 <resources>
-    <string name="app_name">HitungLuasSegitiga</string>
+    <string name="app_name">Hitung Luas Bangun Datar</string>
     <string name="hitung_luas_segitiga">Hitung Luas Segitiga</string>
     <string name="alas">Alas (cm)</string>
     <string name="tinggi">Tinggi (cm)</string>
-    <string name="luas">Luas</string>
+    <string name="luasSegitiga_x">Luas: %1$.2f cm</string>
+    <string name="luasPersegiPanjang_x">Luas: %1$.2f cm</string>
+    <string name="hitung_luas_persegi_panjang">Hitung Luas Persegi Panjang</string>
+    <string name="lebar">Lebar (cm)</string>
+    <string name="hitung">Hitung</string>
+    <string name="panjang_cm">Panjang (cm)</string>
+    <string name="menu_luas_bangun_datar_persegi_panjang_segitiga"><![CDATA[Menu Luas Bangun Datar Persegi Panjang & Segitiga]]></string>
+    <string name="bagikan_template_segitiga">Alas: %1$s cm\nTinggi: %2$s</string>
+    <string name="bagikan_template_persegi_panjang">Panjang: %1$s cm\nLebar: %2$s</string>
+    <string name="bagikan">Bagikan</string>
+    <string name="histori">Histori</string>
 </resources>

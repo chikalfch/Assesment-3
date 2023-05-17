@@ -4,33 +4,29 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Toast
-import org.d3if3056.hitung_luassegitiga.databinding.ActivityMainBinding
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
+import org.d3if3056.hitung_luassegitiga.model.HasilPersegiPanjang
+import org.d3if3056.hitung_luassegitiga.model.HasilSegitiga
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+
+    private lateinit var navController : NavController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_main)
 
-        binding.btnHitung.setOnClickListener {
-            val alas = binding.alasInp.text.toString()
-            val tinggi = binding.tinggiInp.text.toString()
-            var hasil = 0
-            when {
-                TextUtils.isEmpty(alas) -> {
-                    Toast.makeText(this, "Input Pertama Belum Ada!", Toast.LENGTH_SHORT).show()
-                    binding.alasInp.requestFocus()
-                }
-                TextUtils.isEmpty(tinggi) -> {
-                    Toast.makeText(this, "Input Kedua Belum Ada!", Toast.LENGTH_SHORT).show()
-                    binding.tinggiInp.requestFocus()
-                }
-                else -> {
-                    hasil = (alas.toInt() * tinggi.toInt() )/2
-                    binding.luasTextView.text = hasil.toString()
-                }
-            }
-        }
+        navController = findNavController(R.id.myNavHostFragment)
+        NavigationUI.setupActionBarWithNavController(this, navController)
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp()
+    }
+
+
+//    private fun showResult(result: HasilSegitiga) {
+//        binding.luasTextView.text = getString(R.string.luasSegitiga_x, result.hasil)
+//    }
 }

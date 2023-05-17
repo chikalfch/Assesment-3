@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="ui.HitungPersegiPanjangFragment"
+        android:id="@+id/luasPersegiPanjang">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <TextView
+                android:id="@+id/introTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/hitung_luas_persegi_panjang"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="@font/advent_pro_medium"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:labelFor="@id/panjangEditText"
+                android:text="Panjang (cm)"
+                app:layout_constraintBottom_toBottomOf="@+id/panjangEditText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/panjangEditText"
+                app:layout_constraintVertical_bias="0.483" />
+
+
+        <EditText
+                android:id="@+id/panjangEditText"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/lebarTextView"
+                app:layout_constraintTop_toBottomOf="@+id/introTextView" />
+
+        <TextView
+                android:id="@+id/lebarTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:labelFor="@id/lebarEditText"
+                android:text="Lebar (cm)"
+                app:layout_constraintBottom_toBottomOf="@+id/lebarEditText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/lebarEditText"
+                app:layout_constraintVertical_bias="0.58" />
+
+        <EditText
+                android:id="@+id/lebarEditText"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/panjangEditText"
+                app:layout_constraintTop_toBottomOf="@+id/panjangEditText" />
+
+        <Button
+                android:text="Hitung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnpersegipanjang_hitung"
+                app:layout_constraintTop_toBottomOf="@+id/lebarEditText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp" />
+
+        <TextView
+                tools:text="Luas : 0 cm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/luasPersegiPanjangTextView"
+                app:layout_constraintTop_toBottomOf="@+id/btnpersegipanjang_hitung"
+                android:layout_marginTop="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="20sp"
+                android:fontFamily="@font/advent_pro_medium"
+                android:textStyle="bold" />
+
+        <Button
+                android:text="@string/bagikan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnSharePersegiPanjang"
+                android:visibility="invisible"
+                app:layout_constraintTop_toBottomOf="@+id/luasPersegiPanjangTextView"
+                android:layout_marginTop="32dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:visibility="visible"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
