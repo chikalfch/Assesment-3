@@ -21,10 +21,7 @@ class HistoriFragment : Fragment() {
         val factory = HistoriViewModelFactory(db.dao)
         ViewModelProvider(this, factory)[HistoriViewModel::class.java]
     }
-
-    private val layoutDataStore: SettingDataStore by lazy {
-        SettingDataStore(requireContext().dataStore)
-    }
+    
 
     private lateinit var binding: FragmentHistoriBinding
     private lateinit var myAdapter: HistoriAdapter
