@@ -4,7 +4,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="ui.HitungPersegiPanjangFragment"
+        tools:context=".ui.hitung.persegipanjang.PersegiPanjangFragment"
         android:id="@+id/luasPersegiPanjang">
 
     <androidx.constraintlayout.widget.ConstraintLayout

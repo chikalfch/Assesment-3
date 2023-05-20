@@ -1,4 +1,4 @@
-package org.d3if3056.hitung_luassegitiga.ui
+package org.d3if3056.hitung_luassegitiga.ui.hitung.segitiga
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,18 +9,19 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
 import org.d3if3056.hitung_luassegitiga.R
 import org.d3if3056.hitung_luassegitiga.databinding.FragmentHitungSegitigaBinding
-import org.d3if3056.hitung_luassegitiga.model.HasilPersegiPanjang
+import org.d3if3056.hitung_luassegitiga.db.bangundatar.BangunDatarDb
 import org.d3if3056.hitung_luassegitiga.model.HasilSegitiga
 
-class HitungSegitigaFragment : Fragment()
+class SegitigaFragment : Fragment()
 {
     private lateinit var binding: FragmentHitungSegitigaBinding
 
-    private val viewModel: HitungSegitigaViewModel by lazy {
-        ViewModelProvider(requireActivity())[HitungSegitigaViewModel::class.java]
+    private val viewModel: SegitigaViewModel by lazy {
+        val db = BangunDatarDb.getInstance(requireContext())
+        val factory = SegitigaFactory(db.dao)
+        ViewModelProvider(this, factory)[SegitigaViewModel::class.java]
     }
     private fun hitungSegitiga(alas: Float, tinggi: Float): HasilSegitiga {
         val hasil = (alas * tinggi) / 2
@@ -58,14 +59,12 @@ class HitungSegitigaFragment : Fragment()
                 binding.alasEditText.requestFocus()
             }
             else -> {
-                hasil = (alas.toInt() * tinggi.toInt() )/2
-                binding.luasSegitigaTextView.text = getString(R.string.luasSegitiga_x, hasil)
+                viewModel.hitungSegitiga(
+                    alas.toFloat(),
+                    tinggi.toFloat()
+                )
             }
         }
-        viewModel.hitungSegitiga(
-            alas.toFloat(),
-            tinggi.toFloat()
-        )
     }
     private fun showResult(result : HasilSegitiga?) {
         if (result == null) return
