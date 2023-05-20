@@ -3,20 +3,18 @@ package org.d3if3056.hitung_luassegitiga.ui.histori
 import org.d3if3056.hitung_luassegitiga.db.bangundatar.PersegiPanjangEntity
 
 
-import android.graphics.drawable.GradientDrawable
 import android.icu.text.SimpleDateFormat
 import android.os.Build
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import org.d3if3056.hitung_luassegitiga.R
 import org.d3if3056.hitung_luassegitiga.databinding.ItemHistoriBinding
 import org.d3if3056.hitung_luassegitiga.db.bangundatar.SegitigaEntity
-import org.d3if3056.hitung_luassegitiga.db.bangundatar.hitungBangunDatar
+import org.d3if3056.hitung_luassegitiga.model.hitungBangunDatar
 import java.util.*
 
 class HistoriAdapter :

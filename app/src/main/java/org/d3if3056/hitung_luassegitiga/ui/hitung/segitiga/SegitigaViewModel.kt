@@ -9,7 +9,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.d3if3056.hitung_luassegitiga.db.bangundatar.BangunDatarDao
 import org.d3if3056.hitung_luassegitiga.db.bangundatar.SegitigaEntity
-import org.d3if3056.hitung_luassegitiga.db.bangundatar.hitungBangunDatar
+import org.d3if3056.hitung_luassegitiga.model.hitungBangunDatar
 import org.d3if3056.hitung_luassegitiga.model.HasilSegitiga
 
 class SegitigaViewModel  (private val db: BangunDatarDao)  : ViewModel() {

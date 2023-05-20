@@ -1,7 +1,7 @@
-package org.d3if3056.hitung_luassegitiga.db.bangundatar
+package org.d3if3056.hitung_luassegitiga.model
 
-import org.d3if3056.hitung_luassegitiga.model.HasilPersegiPanjang
-import org.d3if3056.hitung_luassegitiga.model.HasilSegitiga
+import org.d3if3056.hitung_luassegitiga.db.bangundatar.PersegiPanjangEntity
+import org.d3if3056.hitung_luassegitiga.db.bangundatar.SegitigaEntity
 
 fun PersegiPanjangEntity.hitungBangunDatar(): HasilPersegiPanjang {
     val luas = panjang * lebar
@@ -9,6 +9,6 @@ fun PersegiPanjangEntity.hitungBangunDatar(): HasilPersegiPanjang {
 }
 
 fun SegitigaEntity.hitungBangunDatar(): HasilSegitiga {
-    val luas = (alas * tinggi) /2
+    val luas = (alas * tinggi) / 2
     return HasilSegitiga(luas)
 }
