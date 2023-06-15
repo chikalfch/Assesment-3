@@ -18,6 +18,9 @@
         <action
                 android:id="@+id/action_MenuFragment_to_historiFragment"
                 app:destination="@id/historiFragment" />
+        <action
+                android:id="@+id/action_MenuFragment_to_listFragment"
+                app:destination="@id/listFragment" />
     </fragment>
     <fragment
             android:id="@+id/SegitigaFragment"
@@ -35,4 +38,9 @@
             android:name="org.d3if3056.hitung_luassegitiga.ui.histori.HistoriFragment"
             android:label="@string/histori"
             tools:layout="@layout/fragment_histori"/>
+    <fragment
+            android:id="@+id/listFragment"
+            android:name="org.d3if3056.mobpro1.ui.main.ListFragment"
+            android:label="ListFragment"
+            tools:layout="@layout/fragment_list"/>
 </navigation>

@@ -9,8 +9,6 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import org.d3if3056.hitung_luassegitiga.R
-import org.d3if3056.hitung_luassegitiga.SettingDataStore
-import org.d3if3056.hitung_luassegitiga.dataStore
 import org.d3if3056.hitung_luassegitiga.databinding.FragmentHistoriBinding
 import org.d3if3056.hitung_luassegitiga.db.bangundatar.BangunDatarDb
 

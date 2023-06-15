@@ -18,6 +18,10 @@
     <string name="hasil_x">Luas: %1$.2f</string>
     <string name="data_x">Panjang: %1$.1f - Lebar: %2$.1f</string>
 
+    <string name="persegi_panjang">Persegi Panjang</string>
+    <string name="luas">Luas = panjang x lebar</string>
+    <string name="message">%1$s diklik!</string>
+
     <string name="hapus_histori">Hapus Histori</string>
     <string name="konfirmasi_hapus">Hapus semua histori?</string>
     <string name="hapus">Hapus</string>

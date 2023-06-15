@@ -31,6 +31,11 @@ class MenuFragment : Fragment() {
                 R.id.action_MenuFragment_to_hitungPersegiPanjangFragment
             )
         }
+        binding.btnListBangunDatar.setOnClickListener {
+            it.findNavController().navigate(
+                R.id.action_MenuFragment_to_listFragment
+            )
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

@@ -21,7 +21,7 @@ class PersegiPanjangViewModel (private val db: BangunDatarDao ) : ViewModel() {
         panjang = panjang,
         lebar = lebar
     )
-    hasilPersegiPanjang.value = dataPersegiPanjang.hitungBangunDatar()
+        hasilPersegiPanjang.value = dataPersegiPanjang.hitungBangunDatar()
          viewModelScope.launch {
             withContext(Dispatchers.IO) {
                 db.insert(dataPersegiPanjang)
