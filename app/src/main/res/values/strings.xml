@@ -26,5 +26,6 @@
     <string name="konfirmasi_hapus">Hapus semua histori?</string>
     <string name="hapus">Hapus</string>
     <string name="batal">Batal</string>
+    <string name="koneksi_error">Gangguan Koneksi</string>
 
 </resources>
