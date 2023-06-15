@@ -4,9 +4,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import org.d3if3056.hitung_luassegitiga.R
 import org.d3if3056.hitung_luassegitiga.databinding.ListItemBinding
 import org.d3if3056.hitung_luassegitiga.model.BangunDatar
+import org.d3if3056.hitung_luassegitiga.network.BangunDatarApi
 
 class ListBangunDatarAdapter: RecyclerView.Adapter<ListBangunDatarAdapter.ViewHolder>() {
     class ViewHolder(
@@ -16,7 +18,12 @@ class ListBangunDatarAdapter: RecyclerView.Adapter<ListBangunDatarAdapter.ViewHo
         fun bind(bangundatar: BangunDatar) = with(binding) {
             namaTextView.text = bangundatar.nama
             bdLuasTextView.text = bangundatar.luas
-            imageView.setImageResource(bangundatar.imageResId)
+            imageView.setImageResource(R.drawable.persegipanjang)
+            Glide.with(imageView.context)
+                .load(BangunDatarApi.getBangunDatarUrl(bangundatar.imageId))
+                .error(R.drawable.baseline_broken_image_24)
+                .into(imageView)
+
 
             root.setOnClickListener {
                 val message = root.context.getString(R.string.message, bangundatar.nama)
