@@ -13,7 +13,7 @@ private val retrofit = Retrofit.Builder()
     .build()
 
 interface BangunDatarApiService {
-    @GET("static-api.json")
+    @GET("listBangunDatar.json")
     suspend fun getListBangunDatar(): String
 }
 object BangunDatarApi {
