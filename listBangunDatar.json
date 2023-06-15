@@ -1,5 +1,5 @@
 [
-    {"nama": "Persegi Panjang", "luas" : "Luas = panjang x lebar", "imageId" : "persegipanjang"},
+    {"nama" : "Persegi Panjang", "luas" : "Luas = panjang x lebar", "imageId" : "persegipanjang"},
     {"nama" : "Segitiga", "luas" : "Luas = 1/2 x (alas x tinggi)", "imageId" : "segitiga"},
     {"nama" : "Lingkaran", "luas" : "Luas = 22/7 x jari-jari x jari-jari", "imageId" : "lingkaran"},
     {"nama" : "Trapesium", "luas" : "Luas = 1/2 x (a + b) x tinggi", "imageId" : "trapesium"},
