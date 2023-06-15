@@ -28,4 +28,10 @@
     <string name="batal">Batal</string>
     <string name="koneksi_error">Gangguan Koneksi</string>
 
+    <string name="channel_name">Updater</string>
+    <string name="channel_desc">List Bangun Datar Otomatis</string>
+    <string name="notif_title">Ayo belajar Hitung Luas dan List Bangun Datar!</string>
+    <string name="notif_text">Cek Aplikasinya.</string>
+
+
 </resources>
