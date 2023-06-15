@@ -22,11 +22,10 @@ class PersegiPanjangViewModel (private val db: BangunDatarDao ) : ViewModel() {
         lebar = lebar
     )
     hasilPersegiPanjang.value = dataPersegiPanjang.hitungBangunDatar()
-        viewModelScope.launch {
+         viewModelScope.launch {
             withContext(Dispatchers.IO) {
                 db.insert(dataPersegiPanjang)
             }
         }
-    }
-    fun getHasilPersegiPanjang(): LiveData<HasilPersegiPanjang?> = hasilPersegiPanjang
+    }fun getHasilPersegiPanjang(): LiveData<HasilPersegiPanjang?> = hasilPersegiPanjang
 }

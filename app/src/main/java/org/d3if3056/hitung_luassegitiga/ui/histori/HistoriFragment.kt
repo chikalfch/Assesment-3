@@ -21,7 +21,7 @@ class HistoriFragment : Fragment() {
         val factory = HistoriViewModelFactory(db.dao)
         ViewModelProvider(this, factory)[HistoriViewModel::class.java]
     }
-    
+
 
     private lateinit var binding: FragmentHistoriBinding
     private lateinit var myAdapter: HistoriAdapter

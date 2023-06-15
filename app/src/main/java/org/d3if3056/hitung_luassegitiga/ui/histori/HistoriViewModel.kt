@@ -8,7 +8,6 @@ import kotlinx.coroutines.withContext
 import org.d3if3056.hitung_luassegitiga.db.bangundatar.BangunDatarDao
 
 class HistoriViewModel  (private val db: BangunDatarDao) : ViewModel() {
-    val dataSegitiga = db.getLastSegitiga()
     val dataPersegiPanjang = db.getLastPersegiPanjang()
 
     fun hapusData() = viewModelScope.launch {
